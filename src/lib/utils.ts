@@ -1,6 +1,2 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-}
+// The class name helper is the kit's; this file keeps the path every component already imports.
+export { cn } from "@mliem2k/kit/web/cn"
