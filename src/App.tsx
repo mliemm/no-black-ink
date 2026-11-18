@@ -100,7 +100,7 @@ function App() {
               {theme === 'light' ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
             </Button>
             <a
-              href="https://github.com/mliem2k/no-black-ink"
+              href="https://github.com/mliemm/no-black-ink"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Source code on GitHub (opens in a new tab)"
@@ -123,7 +123,7 @@ function App() {
             All processing happens locally in your browser.
           </p>
           <a
-            href="https://github.com/mliem2k/no-black-ink"
+            href="https://github.com/mliemm/no-black-ink"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-dim transition-colors hover:text-foreground"
