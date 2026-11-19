@@ -31,20 +31,20 @@ A web-based tool that helps you convert documents to colored ink when you're out
 ## Installation
 
 ```bash
-pnpm install
+bun install
 ```
 
 ## Usage
 
 ```bash
 # Development
-pnpm dev
+bun run dev
 
 # Build for production
-pnpm build
+bun run build
 
 # Preview production build
-pnpm preview
+bun run preview
 ```
 
 ## Privacy
