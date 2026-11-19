@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { LockKeyhole } from 'lucide-react'
 import {
   Dialog,
+  DialogBody,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -40,7 +41,7 @@ function PasswordModal({ show, fileName, onSubmit, onCancel }: PasswordModalProp
 
   return (
     <Dialog open={show} onOpenChange={(open) => !open && onCancel()}>
-      <DialogContent className="w-[calc(100vw-2rem)] max-w-md">
+      <DialogContent showCloseButton className="max-w-md">
         <DialogHeader>
           <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-md border border-border bg-elevated">
             <LockKeyhole className="h-4 w-4 text-foreground" aria-hidden="true" />
@@ -53,7 +54,7 @@ function PasswordModal({ show, fileName, onSubmit, onCancel }: PasswordModalProp
         </DialogHeader>
 
         <form onSubmit={handleSubmit}>
-          <div className="py-1">
+          <DialogBody>
             <Label htmlFor="password" className="mb-2 block text-[12px]">
               Password
             </Label>
@@ -67,8 +68,8 @@ function PasswordModal({ show, fileName, onSubmit, onCancel }: PasswordModalProp
               className="h-10"
               required
             />
-          </div>
-          <DialogFooter className="mt-5">
+          </DialogBody>
+          <DialogFooter>
             <Button type="button" variant="outline" onClick={onCancel}>
               Cancel
             </Button>

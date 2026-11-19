@@ -4,6 +4,9 @@
 
 @plugin 'tailwindcss-animate';
 
+/* Tailwind skips node_modules, so the kit's components are named as a source. */
+@source "../node_modules/@mliemm/kit/src/web";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
@@ -50,6 +53,7 @@
 
   --color-border: var(--border);
   --color-line-strong: var(--line-strong);
+  --color-border-strong: var(--line-strong);
   --color-input: var(--input);
   --color-ring: var(--ring);
 
