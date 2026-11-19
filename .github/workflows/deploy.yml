@@ -8,7 +8,7 @@ on:
       - "public/**"
       - "index.html"
       - "package.json"
-      - "pnpm-lock.yaml"
+      - "bun.lock"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
@@ -17,10 +17,8 @@ permissions:
 
 jobs:
   deploy:
-    uses: mliemm/kit/.github/workflows/deploy-pages.yml@v0.15.0
+    uses: mliemm/kit/.github/workflows/deploy-pages.yml@v0.21.0
     with:
       project: no-black-ink
-      install_command: npx --yes pnpm@9 install --frozen-lockfile
-      build_command: npx --yes pnpm@9 build
       output_directory: dist
     secrets: inherit
